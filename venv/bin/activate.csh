@@ -9,7 +9,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV /home/etiene-niyomugabo123/Etiene-niyomugabo/coding/Machine-Learning-with-numPy-main/venv
+setenv VIRTUAL_ENV /home/etiene-niyomugabo123/Etiene-niyomugabo/coding/Machine-Learning-with-numPy/venv
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/"bin":$PATH"

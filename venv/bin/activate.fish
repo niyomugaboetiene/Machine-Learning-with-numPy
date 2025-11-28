@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV /home/etiene-niyomugabo123/Etiene-niyomugabo/coding/Machine-Learning-with-numPy-main/venv
+set -gx VIRTUAL_ENV /home/etiene-niyomugabo123/Etiene-niyomugabo/coding/Machine-Learning-with-numPy/venv
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/"bin $PATH
