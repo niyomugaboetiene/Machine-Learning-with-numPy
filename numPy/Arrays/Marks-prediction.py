@@ -23,7 +23,6 @@ for i in range(epochs):
     w -= learning_rate * dw
     b -= learning_rate * db
 
-
 # Make prediction
 X_plot = np.linspace(0, 10, 100)
 y_plot = w * X_plot + b
