@@ -8,8 +8,10 @@ def gradient_descent(x, y):
   
     for i in range(iteration):
         y_predicted = m_curr * x + b_curr
-        md = -(2/n)*sum(x * (y-y_predicted))
-        bd = -(2/n)*sum(x*(y-y_predicted))
+        md = -(2/n) * sum(x * (y - y_predicted))
+        bd = -(2/n) * sum(x*(y - y_predicted))
+        # const = 1/n(sum(y - y_predicted)**2)
+        cost = (1/n) * sum([val ** 2 for val in (y - y_predicted)])
         # m = m - learning_rate * m derivative
         m_curr = m_curr - learning_rate * md
         # m = b - learning_rate * b derivative
