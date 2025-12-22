@@ -20,11 +20,16 @@ def gradient_descent(x, y):
     for i in range(iteration):
         # y=mx+b
         y_predicted = m_curr * x + b_curr
+        # If prediction is too small → error is positive
+        # If prediction is too big → error is negative
+        # md tells us how much and in which direction the slope m is wrong
         md = -(2/n) * sum(x * (y - y_predicted))
+        # bd tells us how much and in which direction the intercept b is wrong
         bd = -(2/n) * sum(y - y_predicted)
         # cost = 1/n(sum(y - y_predicted)**2)
         cost = (1/n) * sum([val ** 2 for val in (y - y_predicted)])
         # m = m - learning_rate * m derivative
+        # new value=old value−(learning rate×gradient)
         m_curr = m_curr - learning_rate * md
         # m = b - learning_rate * b derivative
         b_curr = b_curr - learning_rate * bd
