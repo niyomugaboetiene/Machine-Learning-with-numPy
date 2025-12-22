@@ -8,6 +8,8 @@ def gradient_descent(x, y):
     for i in range(iteration):
         y_predicted = m_curr * x + b_curr
         md = -(2/n)*sum(x * (y-y_predicted))
+        bd = -(2/n)*sum(x*(y-y_predicted))
+        m_curr = m_curr - md
   
 x = np.array([1, 2, 3, 4, 5])
 y = np.array([5, 7, 9, 11, 13])
