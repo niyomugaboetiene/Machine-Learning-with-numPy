@@ -1,16 +1,28 @@
 import numpy as np
+# Goal:
 
+# To find the best-fit straight line:
+# 𝑦=mx+b
+# Gradient descent learns the values of:
+# m → slope
+# b → intercept
 def gradient_descent(x, y):
+    # Start with slope m = 0
+    # Start with intercept b = 0
     m_curr = b_curr = 0
+    # iteration → number of times the model updates parameters
     iteration = 1000
+    # n → number of data points
     n = len(x)
+    # learning_rate → step size (how fast parameters change)
     learning_rate = 0.08
   
     for i in range(iteration):
+        # y=mx+b
         y_predicted = m_curr * x + b_curr
         md = -(2/n) * sum(x * (y - y_predicted))
         bd = -(2/n) * sum(y - y_predicted)
-        # const = 1/n(sum(y - y_predicted)**2)
+        # cost = 1/n(sum(y - y_predicted)**2)
         cost = (1/n) * sum([val ** 2 for val in (y - y_predicted)])
         # m = m - learning_rate * m derivative
         m_curr = m_curr - learning_rate * md
